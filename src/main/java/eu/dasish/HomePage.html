@@ -1,0 +1,38 @@
+<wicket:extend>
+	<h1 class="cover-heading">Linguistic Workflow Portal</h1>
+	
+	<p class="lead">1) Choose a workflow</p>
+	<p class="lead">
+		<select class="btn btn-lg btn-default">
+			<option value="auto">Auto-detect</option>
+			<option value="1">NER</option>
+			<option value="2">Cleaning</option>
+			<option value="3">NER + Cleaning</option>
+		</select>
+	</p>
+	
+	<p class="lead">2) Either upload a text file for analysis</p>
+	<p class="lead">
+	<form wicket:id="progressUpload" class="navbar-form navbar-center"
+		role="search">
+		<div class="form-group">
+			<input wicket:id="fileInput" type="file" class="form-control" /> <input
+				type="submit" value="Upload" class="btn btn-lg btn-primary" /> <span
+				wicket:id="progress">[[upload progressbar]]</span>
+		</div class="form-group">
+	</form>
+	</p>
+	
+	<p class="lead">or provide a text</p>
+	<p class="lead">
+	<form wicket:id="textForm" class="navbar-form navbar-center" role="search">
+		<div class="form-group">
+			<textarea wicket:id="textarea" class="form-control"
+				placeholder="Input text" rows="13" cols="70"></textarea>
+			<p>
+				<br /> <a wicket:id="submitLink" class="btn btn-lg btn-primary">Submit</a>
+			</p>
+		</div>
+	</form>
+	</p>
+</wicket:extend>
