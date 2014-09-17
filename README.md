@@ -7,7 +7,7 @@ Linguistic workflow chaining demonstration service.
 Build
 -----
 ```
-mvn intall
+mvn install
 ```
 
 Run locally
