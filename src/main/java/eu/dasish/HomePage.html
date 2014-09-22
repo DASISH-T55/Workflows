@@ -4,14 +4,24 @@
 	<p class="lead">1) Choose a workflow</p>
 	<p class="lead">
 		<select class="btn btn-lg btn-default">
-			<option value="auto">Auto-detect</option>
+			<!--option value="auto">Auto-detect</option-->
 			<option value="1">NER</option>
 			<option value="2">Cleaning</option>
 			<option value="3">NER + Cleaning</option>
 		</select>
 	</p>
+
+	<p class="lead">2) Choose Language</p>
+	<p class="lead">
+		<select class="btn btn-lg btn-default">
+			<!--option value="auto">Auto-detect</option-->
+			<option value="auto">Auto detect language</option>
+			<option value="en">English</option>
+			<option value="es">Spanish</option>
+		</select>
+	</p>
 	
-	<p class="lead">2) Either upload a text file for analysis</p>
+	<p class="lead">3) Either upload a text file for analysis</p>
 	<p class="lead">
 	<form wicket:id="progressUpload" class="navbar-form navbar-center"
 		role="search">
