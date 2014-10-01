@@ -1,7 +1,6 @@
 package eu.dasish;
 
 import org.apache.wicket.ajax.AjaxRequestTarget;
-import org.apache.wicket.ajax.markup.html.form.AjaxSubmitLink;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.model.Model;
@@ -62,7 +61,7 @@ public class ResultPage extends BasePage {
 	public ResultPage(final PageParameters parameters) {
 		Form<String> form = new Form<String>("emailForm", new Model<String>(""));
 		form.add(new TextField<String>("email", form.getModel()));
-		form.add(new AjaxSubmitLink("submitLink") {
+		form.add(new IndicatingAjaxSubmitLink("submitLink") {
 			private static final long serialVersionUID = 4860874580978387733L;
 
 			@Override

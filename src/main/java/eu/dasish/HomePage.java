@@ -3,7 +3,6 @@ package eu.dasish;
 import java.util.List;
 
 import org.apache.wicket.ajax.AjaxRequestTarget;
-import org.apache.wicket.ajax.markup.html.form.AjaxSubmitLink;
 import org.apache.wicket.extensions.ajax.markup.html.form.upload.UploadProgressBar;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextArea;
@@ -30,7 +29,7 @@ public class HomePage extends BasePage {
 		
 		textForm.add(new TextArea<String>("textarea", textForm.getModel()));
 		
-		textForm.add(new AjaxSubmitLink("submitLink") {
+		textForm.add(new IndicatingAjaxSubmitLink("submitLink") {
 			private static final long serialVersionUID = 4860874580978387733L;
 			
 			@Override
